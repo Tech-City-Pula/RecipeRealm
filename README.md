@@ -1,12 +1,26 @@
-# How to set up project
+# Zadatak
 
-1. Clone this repository
-2. Rename the root folder from `starter-pack` to something else
-3. Change the `project_id` inside `supabase/config.toml` from "starter-pack" to something else
-4. Run `npm i` (or any other package manager such as pnpm/bun/yarn)
-5. Update README.md with short project description
-6. Update `.env.example`
-7. Add excalidraw for presentation
-8. Add gist for quick demonstration
-9. ????
-10. Profit
+## Level 1
+
+Postavljanje projekta
+
+- Napraviti vlastitu aplikaciju na Supabaseu - <https://supabase.com/dashboard/projects>
+- Populirati .env.local s podacima iz Supabasea (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
+- Copy pasteati migracije i pokrenuti jednu po jednu u SQL editoru u Supabase-u
+- Loginati se koristeći Supabase CLI i generirati db-types.ts
+- PROJECT_ID zamijeniti sa svojim project_idjem od Supabasea
+
+Kod za loginanje u Supabase i generiranje db-types.ts
+
+```bash
+npx supabase login
+npx supabase gen types typescript --project-id PROJECT_ID > db-types.ts
+```
+
+## Level 2
+
+Napraviti funkcionalnu formu za unos recepta (sa više slika)
+
+## Level 3
+
+Dohvatiti slike iz supabase storagea i prikazati ih
