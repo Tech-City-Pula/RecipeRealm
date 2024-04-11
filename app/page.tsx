@@ -1,5 +1,3 @@
-"use server"
-
 import Link from "next/link";
 import { FaBook } from "react-icons/fa";
 import { buttonVariants } from "@/components/ui/button";
