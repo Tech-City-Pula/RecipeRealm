@@ -10,6 +10,7 @@ interface ThumbnailProps {
 export default function Thumbnail({ src, onRemove }: ThumbnailProps) {
   return (
     <div className="relative w-24">
+			{/* LEVEL 3: Step 1: Dodati Image komponentu */}
       <Image
         src={src}
         alt="Thumbnail"

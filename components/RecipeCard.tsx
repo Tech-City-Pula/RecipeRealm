@@ -18,6 +18,7 @@ export default async function RecipeCard({ recipe }: { recipe: Recipe }) {
 	return (
 		<Card>
 			<CardHeader>
+				{/* LEVEL 4: Step 6: Dodati Image komponentu */}
 				<Image width={500} height={500} className="w-full h-64 rounded object-center object-cover" src={recipe.image?.url ?? ''} alt={recipe.image?.name ?? ''}/>
 				<h1 className="text-2xl font-bold">{recipe.name}</h1>
 				<p>{recipe.description}</p>
