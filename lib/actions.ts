@@ -8,7 +8,7 @@ import {
 import { revalidatePath } from "next/cache";
 
 export async function createRecipe(previousState: any, formData: FormData) {
-  // LEVEL 2: Step 2: Mutirati content recepta i validirati ih sa RecipeContentSchemom
+  // LEVEL 2: Validirati content recepta
   const recipeContent = RecipeContentSchema.parse({
     name: formData.get("name"),
     description: formData.get("description"),
@@ -27,7 +27,7 @@ export async function createRecipe(previousState: any, formData: FormData) {
 
     if (recipeResponse.error) throw recipeResponse.error;
 
-    // LEVEL 2: Step 4: Mutirati listu slika i validirati ih sa RecipeImagesSchemom
+    // LEVEL 2: Step 4: Validirati listu slika
     const images = RecipeImagesSchema.parse({
       images: formData.getAll("images"),
     }).images;
