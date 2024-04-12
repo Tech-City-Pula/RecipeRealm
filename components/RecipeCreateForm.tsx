@@ -17,25 +17,17 @@ const initialState = {
 
 function SubmitButton({ finished} : { finished: boolean }) {
 	// LEVEL 2: Step 8: Dohvatiti pending status forme
-	// const { pending } = useFormStatus();
 
 	// LEVEL 2: Step 9: Dodati Loader2 komponentu i disableat Button dok se form data šalje
 	return (
 		<Button type="submit">Submit</Button>
-		// 	<Button type="submit" aria-disabled={pending}>
-		// 		{pending && (<Loader2 className='size-3 animate-spin' />)}
-		// 		Submit
-		// 		{finished && "✔️"}
-		//  </Button>
 	)
 }
 
 export default function RecipeCreateForm() {
 	// LEVEL 2: Step 1: Dodati state i formAction sa useFormState
-	// const [state, formAction] = useFormState<typeof initialState, FormData>(createRecipe, initialState);
 
 	// LEVEL 3: Step 1: Dodati thumbnails, createThumbnail i clearThumbnails sa useThumbnails
-	// const { thumbnails, createThumbnail, clearThumbnails } = useThumbnails();
 
   return (
 		// LEVEL 2: Step 2: Dodati action u formu
@@ -60,23 +52,12 @@ export default function RecipeCreateForm() {
 				<Label htmlFor="images">Images{" "}<span className="text-red-600">*</span></Label>
 				<Input id="images" name="images" type="file" multiple required accept={ACCEPTED_IMAGE_TYPES.join(", ")} onChange={(event) => {
 					// LEVEL 3: Step 6: Očistiti thumbailove i kreirati nove
-					// clearThumbnails();
-					// const files = event.target.files ?? [];
-					// for (const file of files) {
-					// 	createThumbnail(file);
-					// }
 				}} />
 				<p className="text-muted-foreground text-sm">You can add multiple images for your meal/dessert, but only <b>.jpg</b>, <b>.jpeg</b>, <b>.png</b> or <b>.webp</b> files.</p>
 			</div>
 			{/* LEVEL 3: Step 7: Prikazati Thumbnail komponente */}
-			{/* <div className="flex flex-wrap gap-2">
-				{thumbnails.map((thumbnail, index) => (
-					<Thumbnail key={index} src={thumbnail}/>
-				))}
-			</div> */}
+	
 			{/* LEVEL 2: Step 10: Dodati SubmitButton komponentu */}
-			{/* <SubmitButton finished={state.message === "Recipe submitted"}/>
-			<p aria-live="polite" className="sr-only" role="status">{state.message}</p>	 */}
 		</form>
   );
 }

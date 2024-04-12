@@ -11,13 +11,7 @@ export default function Thumbnail({ src, onRemove }: ThumbnailProps) {
   return (
     <div className="relative w-24">
 			{/* LEVEL 3: Step 2: Dodati Image komponentu */}
-      {/* <Image
-        src={src}
-        alt="Thumbnail"
-        width={100}
-        height={100}
-        className="rounded-md object-cover object-center"
-      /> */}
+
       {onRemove && (
         <Button
           type="button"
