@@ -32,6 +32,8 @@ function SubmitButton({ finished} : { finished: boolean }) {
 export default function RecipeCreateForm() {
 	// LEVEL 2: Step 1: Dodati state i formAction sa useFormState
 	const [state, formAction] = useFormState<typeof initialState, FormData>(createRecipe, initialState);
+
+	// LEVEL 3: Step 1: Dodati thumbnails, createThumbnail i clearThumbnails sa useThumbnails
 	const { thumbnails, createThumbnail, clearThumbnails } = useThumbnails();
 
   return (
@@ -55,7 +57,7 @@ export default function RecipeCreateForm() {
 			<div className="space-y-1">
 				<Label htmlFor="images">Images{" "}<span className="text-red-600">*</span></Label>
 				<Input id="images" name="images" type="file" multiple required accept={ACCEPTED_IMAGE_TYPES.join(", ")} onChange={(event) => {
-					// LEVEL 3: Step 5: Očistiti thumbailove i kreirati nove
+					// LEVEL 3: Step 6: Očistiti thumbailove i kreirati nove
 					clearThumbnails();
 					const files = event.target.files ?? [];
 					for (const file of files) {
@@ -64,7 +66,7 @@ export default function RecipeCreateForm() {
 				}} />
 				<p className="text-muted-foreground text-sm">You can add multiple images for your meal/dessert, but only <b>.jpg</b>, <b>.jpeg</b>, <b>.png</b> or <b>.webp</b> files.</p>
 			</div>
-			{/* LEVEL 3: Step 6: Prikazati Thumbnail komponente */}
+			{/* LEVEL 3: Step 7: Prikazati Thumbnail komponente */}
 			<div className="flex flex-wrap gap-2">
 				{thumbnails.map((thumbnail, index) => (
 					<Thumbnail key={index} src={thumbnail}/>

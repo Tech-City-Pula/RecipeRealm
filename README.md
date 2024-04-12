@@ -33,12 +33,13 @@ Napraviti funkcionalnu formu za unos recepta (sa više slika)
 
 Prikazati thumbnailove tijekom kreiranja recepta
 
-1. Dodati Image komponentu
-2. Kreirati URL objekat za sliku i postavi thumbailove
-3. Očistiti thumbailove
-4. Ukloniti thumbail s indexom
-5. Očistiti thumbailove i kreirati nove (u onChange u file inputu)
-6. Prikazati Thumbnail komponente
+1. Dodati thumbnails, createThumbnail i clearThumbnails sa useThumbnails
+2. Dodati Image komponentu
+3. Kreirati URL objekat za sliku i postavi thumbailove
+4. Očistiti thumbailove
+5. Ukloniti thumbail s indexom
+6. Očistiti thumbailove i kreirati nove (u onChange u file inputu)
+7. Prikazati Thumbnail komponente
 
 ## Level 4
 
