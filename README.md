@@ -22,12 +22,15 @@ npx supabase gen types typescript --project-id PROJECT_ID > db-types.ts
 Napraviti funkcionalnu formu za unos recepta (sa više slika)
 
 1. Dodati state i formAction sa useFormState
-2. Validirati content recepta
-3. Kreirati novi recept u bazu podataka i dohvatiti njegov id
-4. Validirati listu slika
-5. Uploadati slike na Supabase storage na folder sa id-em novog recepta
-6. Dohvatiti pending status forme
-7. Dodati Loader2 komponentu
+2. Dodati action u formu
+3. Validirati content recepta
+4. Kreirati novi recept u bazu podataka i dohvatiti njegov id
+5. Validirati listu slika
+6. Uploadati slike na Supabase storage na folder sa id-em novog recepta
+7. Revalidirati home page rutu
+8. Dohvatiti pending status forme
+9. Dodati Loader2 komponentu i disableat Button dok se form data šalje
+10. Dodati SubmitButton komponentu
 
 ## Level 3
 
