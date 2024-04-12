@@ -5,22 +5,22 @@ export const useThumbnails = () => {
 
   const createThumbnail = (file: File) => {
     // LEVEL 3: Step 3: Kreirati URL objekat za sliku i postavi thumbailove
-    // const url = URL.createObjectURL(file);
-    // setThumbnails((prevThumbnails) => [...prevThumbnails, url]);
+    const url = URL.createObjectURL(file);
+    setThumbnails((prevThumbnails) => [...prevThumbnails, url]);
   };
 
   const clearThumbnails = () => {
     // LEVEL 3: Step 4: Očistiti thumbailove
-    // setThumbnails([]);
+    setThumbnails([]);
   };
 
   const removeThumbnail = (index: number) => {
     // LEVEL 3: Step 5: Ukloniti thumbail s indexom
-    // setThumbnails((prevThumbnails) => {
-    //   const newThumbnails = [...prevThumbnails];
-    //   newThumbnails.splice(index, 1);
-    //   return newThumbnails;
-    // });
+    setThumbnails((prevThumbnails) => {
+      const newThumbnails = [...prevThumbnails];
+      newThumbnails.splice(index, 1);
+      return newThumbnails;
+    });
   };
 
   return {
