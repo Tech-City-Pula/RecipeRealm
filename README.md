@@ -28,9 +28,10 @@ Napraviti funkcionalnu formu za unos recepta (sa više slika)
 5. Validirati listu slika
 6. Uploadati slike na Supabase storage na folder sa id-em novog recepta
 7. Revalidirati home page rutu
-8. Dohvatiti pending status forme
-9. Dodati Loader2 komponentu i disableat Button dok se form data šalje
-10. Dodati SubmitButton komponentu
+8. Dodati redirect nakon revalidacije
+9. Dohvatiti pending status forme
+10. Dodati Loader2 komponentu i disableat Button dok se form data šalje
+11. Dodati SubmitButton komponentu
 
 ## Level 3
 

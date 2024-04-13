@@ -6,6 +6,7 @@ import {
   RecipeImagesSchema,
 } from "@/lib/validation-schemas/form";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 export async function createRecipe(previousState: any, formData: FormData) {
   // LEVEL 2: Step 3: Validirati content recepta
@@ -59,5 +60,9 @@ export async function createRecipe(previousState: any, formData: FormData) {
     return {
       message: "An error occurred while submitting your recipe.",
     };
-  }
+  } 
+  // LEVEL 2: Step 8: Dodati redirect nakon revalidacije
+  // finally {  
+  //   redirect('/')
+  // }
 }
